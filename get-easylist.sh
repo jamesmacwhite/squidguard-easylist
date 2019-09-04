@@ -141,7 +141,8 @@ case "$1" in
 		else
 			SQUIDGUARD_BIN=$(command -v squidguard squidGuard)
 		fi
-		FILTER_CONF_FILE="${SQUID_CONF_DIR}/${FILTER_TYPE}.conf"
+		#FILTER_CONF_FILE="${SQUID_CONF_DIR}/${FILTER_TYPE}.conf"
+		FILTER_CONF_FILE="/etc/squidguard/${FILTER_TYPE}.conf"
 		FILTER_DB_DIR=$(get_squid_conf_value "dbhome" "${FILTER_CONF_FILE}")
 		FILTER_LOG_DIR=$(get_squid_conf_value "logdir" "${FILTER_CONF_FILE}")
 		
